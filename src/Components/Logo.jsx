@@ -3,9 +3,9 @@ import dealsdray from "../Images/dealsdray.jpg";
 
 function Logo() {
   return (
-    <div>
-      <div className="md:mx-2 md:w-full md:max-w-sm">
-        <img className=" ml-2 h-20" src={dealsdray} alt="Your Company" />
+    <div className="bg-slate-100 flex items-center">
+      <div className="flex-shrink-0">
+        <img className="h-16 md:h-20 ml-2" src={dealsdray} alt="Your Company" />
       </div>
     </div>
   );

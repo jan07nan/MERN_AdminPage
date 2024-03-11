@@ -7,8 +7,8 @@ import Button from "../Components/Button";
 
 function CreateEmployee() {
   return (
-    <div>
-      <div className="flex flex-row gap-9 mt-4">
+    <div className="w-full max-h-screen">
+      <div className="bg-slate-100 flex flex-row gap-9 ">
         <Logo />
         <Header />
       </div>

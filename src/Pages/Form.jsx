@@ -3,24 +3,23 @@ import dealsdray from "../Images/dealsdray.jpg";
 import { InputControl } from "../Components/InputControl";
 import Button from "../Components/Button";
 import { Link } from "react-router-dom";
-import Dashboard from "./Dashboard";
 
-function form() {
+function Form() {
   return (
-    <div>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-14 w-auto"
-            src={dealsdray}
-            alt="Your Company"
-          />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
-          </h2>
-        </div>
+    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <img
+          className="mx-auto h-14 w-auto"
+          src={dealsdray}
+          alt="Your Company"
+        />
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          Sign in to your account
+        </h2>
+      </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" action="#" method="POST">
             <InputControl
               id="email"
@@ -49,4 +48,4 @@ function form() {
   );
 }
 
-export default form;
+export default Form;
