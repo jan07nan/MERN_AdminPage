@@ -2,6 +2,8 @@ import React from "react";
 import dealsdray from "../Images/dealsdray.jpg";
 import { InputControl } from "../Components/InputControl";
 import Button from "../Components/Button";
+import { Link } from "react-router-dom";
+import Dashboard from "./Dashboard";
 
 function form() {
   return (
@@ -36,7 +38,9 @@ function form() {
               />
             </div>
             <div>
-              <Button />
+              <Link to="/dashboard">
+                <Button value="Sign In" />
+              </Link>
             </div>
           </form>
         </div>

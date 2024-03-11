@@ -3,6 +3,7 @@ import Logo from "../Components/Logo";
 import Header from "../Components/Header";
 import PageHeader from "../Components/PageHeader";
 import { InputControl } from "../Components/InputControl";
+import Button from "../Components/Button";
 
 function CreateEmployee() {
   return (
@@ -68,12 +69,7 @@ function CreateEmployee() {
             <input type="file" id="myFile" name="filename" />
           </form>
         </div>
-        <button
-          className="ml-36 mt-6 w-20 min-h-2 hover:bg-slate-200 active:bg-slate-300 bg-slate-400 text-slate-950 border-2 rounded-md p-2"
-          type="submit"
-        >
-          Submit
-        </button>
+        <Button value="Submit" />
       </div>
     </div>
   );
