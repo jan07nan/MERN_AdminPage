@@ -3,12 +3,12 @@ import Logo from "../Components/Logo";
 import Header from "../Components/Header";
 import PageHeader from "../Components/PageHeader";
 
-function Dashboard() {
+function Dashboard({ user }) {
   return (
     <div>
       <div className="bg-slate-100 flex flex-row gap-9">
         <Logo />
-        <Header />
+        <Header user={user} />
       </div>
       <PageHeader label="Dashboard" />
       <div>

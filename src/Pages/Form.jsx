@@ -1,18 +1,25 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import dealsdray from "../Images/dealsdray.jpg";
 import { InputControl } from "../Components/InputControl";
 import Button from "../Components/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { login } from "../api/fetcher";
 
-function Form() {
+function Form({ setUser }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
-  const onSubmit = (data) => {
+
+  const onSubmit = async (data) => {
+    const  res = await login({
+      username : data.username,
+      password : data.password
+    });
+    setUser(res);
+    localStorage.setItem('user', (res));
     navigate("/dashboard");
   };
 
@@ -33,14 +40,14 @@ function Form() {
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <InputControl
-              id="username"
+              id="email"
               label="Username"
-              placeholder="Enter your username"
+              placeholder="Enter your UserName"
               register={register("username", {
                 required: "Required",
               })}
-              error={errors.email?.message}
-              touched={!!errors.email}
+              error={errors.username?.message}
+              touched={!!errors.username}
             />
             <div>
               <InputControl
